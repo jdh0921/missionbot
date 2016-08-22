@@ -30,8 +30,8 @@ function respond() {
 }
 function mission(banner) {
 //Parse Google Spreadsheet for Appropriate Banner and Mission, if Applicable
-  console.log(banner);
-
+  var bannerlookup = banner.slice(9)
+  console.log(bannerlookup)
 }
 function postMessage(arr) {
   var botResponse, options, body, botReq;
