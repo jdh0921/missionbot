@@ -7,7 +7,7 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage(request.txt);
     this.res.end();
   } else {
     console.log("don't care");
@@ -16,11 +16,11 @@ function respond() {
   }
 }
 
-function postMessage() {
+function postMessage(arr) {
   var botResponse, options, body, botReq;
-
-  botResponse = request.text;
-
+  
+  botResponse = arr;
+  
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
@@ -37,7 +37,7 @@ function postMessage() {
       "lat"   : "70.000",
       "name"  : "GroupMe HQ"
     }
-    ]
+      ]
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
