@@ -32,8 +32,8 @@ function mission(banner) {
 //Parse Google Spreadsheet for Appropriate Banner and Mission, if Applicable
   var bannerlookup = banner.slice(9);
   var mission = bannerlookup.indexOf(" ");
-  var missionid = bannerlookup.slice(mission);
-  var bannerid = bannerlookup.substr(0,mission-1);
+  var missionid = bannerlookup.slice(mission+1);
+  var bannerid = bannerlookup.substr(0,mission);
   console.log(bannerlookup);
   console.log(mission);
   console.log(missionid);
