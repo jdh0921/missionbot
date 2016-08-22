@@ -4,21 +4,17 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\!mission$/;
-      
-  var test = request.txt;
-  console.log(test);
+
+  console.log(request);
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     mission();
     postMessage('I need a friend. :(');
     this.res.end();
   }
-  var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\!burrito$/;
-
-  if(request.text && botRegex.test(request.text)) {
+  else if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage('I am a delicious Burrito');
     this.res.end();
     return;
   
