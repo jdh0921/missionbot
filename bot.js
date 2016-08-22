@@ -12,7 +12,10 @@ function respond() {
     postMessage('I need a friend. :(');
     this.res.end();
   }
-  else if(request.text && botRegex.test(request.text)) {
+  
+  botRegex = /^\!burrito$/;
+  
+  if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage('I am a delicious Burrito');
     this.res.end();
