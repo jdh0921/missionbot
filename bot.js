@@ -31,7 +31,14 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : botResponse
+    "text" : botResponse,
+    "attachments" : [
+    {
+      "type"  : "location",
+      "lng"   : "40.000",
+      "lat"   : "70.000",
+      "name"  : "GroupMe HQ"
+    }
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
