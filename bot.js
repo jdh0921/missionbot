@@ -7,7 +7,7 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage('I''ve been bad.');
+    postMessage('I will stop repeating myself');
     this.res.end();
   }
   var request = JSON.parse(this.req.chunks[0]),
