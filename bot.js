@@ -9,7 +9,7 @@ function respond() {
   if(keyword && botRegex.test(keyword)) {
     this.res.writeHead(200);
     mission(request.text);
-    postMessage('I need a friend. :(');
+    //postMessage('I need a friend. :(');
     this.res.end();
   }
   
@@ -33,8 +33,10 @@ function mission(banner) {
   var bannerlookup = banner.slice(9);
   var mission = bannerlookup.indexOf(" ");
   var missionid = bannerlookup.slice(mission);
-  var bannerid = bannerlookup.substr(0,mission-1)
+  var bannerid = bannerlookup.substr(0,mission-1);
+  console.log(bannerlookup);
   console.log(mission);
+  console.log(missionid);
   console.log(bannerid);
 }
 function postMessage(arr) {
