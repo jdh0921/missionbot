@@ -19,7 +19,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = request;
+  botResponse = 'tacos';
 
   options = {
     hostname: 'api.groupme.com',
