@@ -6,7 +6,6 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\!mission$/;
   var keyword = request.text.slice(0,8)
-  console.log(keyword)
   if(keyword && botRegex.test(keyword)) {
     this.res.writeHead(200);
     mission(request.text);
@@ -34,7 +33,7 @@ function mission(banner) {
   var bannerlookup = banner.slice(9);
   var mission = bannerlookup.indexOf(" ");
   var missionid = bannerlookup.slice(mission);
-  var bannerid = bannerlookup.substr(bannerlookup,mission-1)
+  var bannerid = bannerlookup.substr(0,mission-1)
   console.log(mission);
   console.log(bannerid);
 }
