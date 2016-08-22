@@ -29,7 +29,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : botResponse,
+    "text" : request.text,
     "attachments" : [
     {
       "type"  : "location",
