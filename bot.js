@@ -6,10 +6,9 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\!mission$/;
 
-  console.log(request.text);
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    mission();
+    mission(request.text);
     postMessage('I need a friend. :(');
     this.res.end();
   }
@@ -29,8 +28,10 @@ function respond() {
     return;
   }
 }
-function mission() {
-  
+function mission(banner) {
+//Parse Google Spreadsheet for Appropriate Banner and Mission, if Applicable
+  console.log(banner);
+
 }
 function postMessage(arr) {
   var botResponse, options, body, botReq;
