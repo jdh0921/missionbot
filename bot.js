@@ -5,7 +5,7 @@ function respond() {
   //Check for Mission Keyword
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\!mission$/;
-  var keyword = request.text.slice(1,8)
+  var keyword = request.text.slice(0,8)
   console.log(keyword)
   if(keyword && botRegex.test(keyword)) {
     this.res.writeHead(200);
