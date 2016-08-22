@@ -6,11 +6,7 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\!mission$/;
-{ 
-“time”: “05:27:57 AM”,
-“milliseconds_since_epoch”: 1394774877499,
-“date”: “03-14-2014"
-}
+
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
