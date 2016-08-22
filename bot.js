@@ -38,6 +38,7 @@ function postMessage() {
       "lat"   : "70.000",
       "name"  : "GroupMe HQ"
     }
+    ]
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
