@@ -31,8 +31,12 @@ function respond() {
 }
 function mission(banner) {
 //Parse Google Spreadsheet for Appropriate Banner and Mission, if Applicable
-  var bannerlookup = banner.slice(9)
-  console.log(bannerlookup)
+  var bannerlookup = banner.slice(9);
+  var mission = bannerlookup.indexOf(" ");
+  var missionid = bannerlookup.slice(mission);
+  var bannerid = bannerlookup.substr(bannerlookup,mission-1)
+  console.log(mission);
+  console.log(bannerid);
 }
 function postMessage(arr) {
   var botResponse, options, body, botReq;
