@@ -7,7 +7,8 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage('I will stop repeating myself');
+    mission();
+    postMessage(botRegex.test(request.text));
     this.res.end();
   }
   var request = JSON.parse(this.req.chunks[0]),
@@ -24,7 +25,9 @@ function respond() {
     this.res.end();
   }
 }
-
+function mission() {
+  
+}
 function postMessage(arr) {
   var botResponse, options, body, botReq;
   
