@@ -5,8 +5,9 @@ function respond() {
   //Check for Mission Keyword
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\!mission$/;
-
-  if(request.text && botRegex.test(request.text)) {
+  var keyword = request.text.slice(1,8)
+  console.log(keyword)
+  if(keyword && botRegex.test(keyword)) {
     this.res.writeHead(200);
     mission(request.text);
     postMessage('I need a friend. :(');
@@ -15,7 +16,7 @@ function respond() {
   
   botRegex = /^\!burrito$/;
   
-  if(request.text && botRegex.test(request.text)) {
+  if(keyword && botRegex.test(keyword)) {
     this.res.writeHead(200);
     postMessage('I am a delicious Burrito');
     this.res.end();
