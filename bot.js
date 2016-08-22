@@ -5,8 +5,8 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\!mission$/;
       
-  var test = request.txt
-  console.log(test)
+  var test = request.txt;
+  console.log(test);
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     mission();
