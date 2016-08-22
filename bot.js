@@ -7,7 +7,7 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(request.txt);
+    postMessage('I am a cucumber');
     this.res.end();
   } else {
     console.log("don't care");
