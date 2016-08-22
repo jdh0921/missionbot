@@ -1,12 +1,4 @@
 var HTTPS = require('https');
-var spreadsheetID = "1jYbNu4UglKJUOeOFK2DD1hC1cKbHpOjUnMi5-KD6uX0";
-var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
-$.getJSON(url, function(data) {
-  var entry = data.feed.entry;
-  $(entry).each(function(){
-  });
- 
- });
 var botID = process.env.BOT_ID;
 
 function respond() {
@@ -27,7 +19,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = +this.gsx$bannername.$t;
+  botResponse = request[9];
 
   options = {
     hostname: 'api.groupme.com',
