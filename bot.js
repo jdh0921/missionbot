@@ -7,8 +7,17 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(request);
+    postMessage('I am the Mission Master');
     this.res.end();
+  }
+  var request = JSON.parse(this.req.chunks[0]),
+      botRegex = /^\!burrito$/;
+
+  if(request.text && botRegex.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage('I am a delicious burrito');
+    this.res.end();
+  
   } else {
     console.log("don't care");
     this.res.writeHead(200);
