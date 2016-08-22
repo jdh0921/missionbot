@@ -20,11 +20,13 @@ function respond() {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
+    return;
   
   } else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
+    return;
   }
 }
 function mission() {
