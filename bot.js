@@ -34,11 +34,16 @@ function mission(banner) {
   var mission = bannerlookup.indexOf(" ");
   var missionid = bannerlookup.slice(mission+1);
   var bannerid = bannerlookup.substr(0,mission);
+  
+  var opts = {sendMethod: 'auto'};
   var url = 'https://docs.google.com/spreadsheets/d/1jYbNu4UglKJUOeOFK2DD1hC1cKbHpOjUnMi5-KD6uX0/edit#gid=0';
-  var query = new google.visualization.Query(url);
+  var query = new google.visualization.Query(url,opts);
   query.setQuery('select A');
   query.send(handleQueryResponse);
   console.log(query);
+}
+function handleQueryResponse(response){
+  
 }
 function postMessage(arr) {
   var botResponse, options, body, botReq;
