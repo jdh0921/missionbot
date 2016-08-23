@@ -30,6 +30,7 @@ function respond() {
 }
 function mission(banner) {
 //Parse Google Spreadsheet for Appropriate Banner and Mission, if Applicable
+  var blockspring = require('blockspring');
   var bannerlookup = banner.slice(9);
   var mission = bannerlookup.indexOf(" ");
   var missionid = bannerlookup.slice(mission+1);
