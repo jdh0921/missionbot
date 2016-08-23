@@ -34,10 +34,11 @@ function mission(banner) {
   var mission = bannerlookup.indexOf(" ");
   var missionid = bannerlookup.slice(mission+1);
   var bannerid = bannerlookup.substr(0,mission);
-  console.log(bannerlookup);
-  console.log(mission);
-  console.log(missionid);
-  console.log(bannerid);
+
+  var query = new google.visualization.Query(https://docs.google.com/spreadsheets/d/1jYbNu4UglKJUOeOFK2DD1hC1cKbHpOjUnMi5-KD6uX0/edit#gid=0);
+  query.setQuery('select *');
+  query.send(handleQueryResponse);
+  console.log(query);
 }
 function postMessage(arr) {
   var botResponse, options, body, botReq;
