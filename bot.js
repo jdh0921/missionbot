@@ -35,8 +35,14 @@ function mission(banner) {
   var missionid = bannerlookup.slice(mission+1);
   var bannerid = bannerlookup.substr(0,mission);
   
-  blockspring.runParsed("query-public-google-spreadsheet", { "query": , "url": }, { "api_key": "br_39954_ac4fb5aeb8efe9839ea601454693578820d73f88" }, function(res){
-    console.log(res.params);
+  blockspring.runParsed("personal-assistant-jeannie", {
+  message: "What's the weather like in Antarctica today?"
+  }, 
+  function(res) 
+  { 
+  console.log(res.params["answer"]); 
+    
+  })
 }
 function handleQueryResponse(response){
   console.log(response);
