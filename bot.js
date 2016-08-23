@@ -35,10 +35,8 @@ function mission(banner) {
   var missionid = bannerlookup.slice(mission+1);
   var bannerid = bannerlookup.substr(0,mission);
   
-  var opts = {sendMethod: 'auto'};
-  var url = 'https://docs.google.com/spreadsheets/d/1jYbNu4UglKJUOeOFK2DD1hC1cKbHpOjUnMi5-KD6uX0/edit#gid=0';
-  var query = new google.visualization.Query(url,opts);
-  query.setQuery('select A');
+  var queryString = encodeURIComponent('SELECT A');
+  var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1jYbNu4UglKJUOeOFK2DD1hC1cKbHpOjUnMi5-KD6uX0/gviz/tq?gid=0&headers=1&tq=' + queryString);
   query.send(handleQueryResponse);
   console.log(query);
 }
