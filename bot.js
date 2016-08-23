@@ -36,8 +36,8 @@ function mission(banner) {
   var bannerid = bannerlookup.substr(0,mission);
   
   var queryString = encodeURIComponent('SELECT A WHERE A == 1');
-  var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1jYbNu4UglKJUOeOFK2DD1hC1cKbHpOjUnMi5-KD6uX0/gviz/tq?gid=0&headers=1&tq=' + queryString);
   var errormsg = getDetailedMessage();
+  var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1jYbNu4UglKJUOeOFK2DD1hC1cKbHpOjUnMi5-KD6uX0/gviz/tq?gid=0&headers=1&tq=' + queryString);
   query.send(handleQueryResponse);
   console.log(errormsg);
 }
