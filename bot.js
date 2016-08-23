@@ -3,9 +3,6 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   //Check for Mission Keyword
-  var imported = document.createElement('script');
-  imported.src = 'https://www.google.com/uds/modules/gviz/gviz-api.js';
-  document.head.appendChild(imported);
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\!mission$/;
   var keyword = request.text.slice(0,8)
