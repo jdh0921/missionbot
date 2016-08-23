@@ -35,14 +35,13 @@ function mission(banner) {
   var missionid = bannerlookup.slice(mission+1);
   var bannerid = bannerlookup.substr(0,mission);
   
-  var queryString = encodeURIComponent('SELECT A');
-  getDetailedMessage();
+  var queryString = encodeURIComponent('SELECT A GROUP BY A');
   var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1jYbNu4UglKJUOeOFK2DD1hC1cKbHpOjUnMi5-KD6uX0/gviz/tq?gid=0&headers=1&tq=' + queryString);
   query.send(handleQueryResponse);
-  console.log(errormsg);
+  console.log(query);
 }
 function handleQueryResponse(response){
-  
+  console.log(response);
 }
 function postMessage(arr) {
   var botResponse, options, body, botReq;
