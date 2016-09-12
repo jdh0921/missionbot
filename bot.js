@@ -9,7 +9,7 @@ function respond() {
   if(keyword && botRegex.test(keyword)) {
     this.res.writeHead(200);
     mission(request.text);
-    //postMessage('I need a friend. :(');
+    postMessage('I need a friend. :(');
     this.res.end();
   }
   
