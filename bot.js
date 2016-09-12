@@ -34,6 +34,10 @@ function mission(banner) {
   var mission = bannerlookup.indexOf(" ");
   var missionid = bannerlookup.slice(mission+1);
   var bannerid = bannerlookup.substr(0,mission);
+  console.log(bannerlookup);
+  console.log(mission);
+  console.log(missionid);
+  console.log(bannerid);
   
 }
 function handleQueryResponse(response){
