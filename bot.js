@@ -40,7 +40,6 @@ function mission(banner) {
   console.log(bannerid);
   
 var mysql      = require('mysql');
-  console.log(mysql);
 var connection = mysql.createConnection({
   host     : 'us-cdbr-iron-east-04.cleardb.net',
   user     : 'b643743dcc0429',
@@ -50,7 +49,7 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-connection.query('SELECT * from banner', function(err, rows, fields) {
+connection.query('SELECT bannerid from banner', function(err, rows, fields) {
   if (!err)
     console.log('The solution is: ', rows);
   else
