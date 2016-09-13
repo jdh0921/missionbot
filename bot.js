@@ -43,7 +43,7 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'us-cdbr-iron-east-04.cleardb.net',
   user     : 'b643743dcc0429',
-  password : '5f59d79',
+  password : 'a5f59d79',
   database : 'heroku_54c7a89f9f7eb2d'
 });
 
