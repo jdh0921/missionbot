@@ -44,13 +44,24 @@ dataSource.setUser("b643743dcc0429");
 dataSource.setPassword("a5f59d79");
 dataSource.setServerName("us-cdbr-iron-east-04.cleardb.net");
 
-Connection conn = dataSource.getConnection();
-Statement stmt = conn.createStatement();
-ResultSet rs = stmt.executeQuery("SELECT bannerid FROM banners");
-rs.close();
-stmt.close();
-conn.close();
-  
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'us-cdbr-iron-east-04.cleardb.net',
+  user     : 'b643743dcc0429',
+  password : '5f59d79,
+  database : 'heroku_54c7a89f9f7eb2d'
+});
+
+connection.connect();
+
+connection.query('SELECT * from banner', function(err, rows, fields) {
+  if (!err)
+    console.log('The solution is: ', rows);
+  else
+    console.log('Error while performing Query.');
+});
+
+connection.end();
 }
 function handleQueryResponse(response){
   console.log(response);
