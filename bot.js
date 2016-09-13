@@ -47,8 +47,16 @@ var connection = mysql.createConnection({
   database : 'heroku_54c7a89f9f7eb2d'
 });
 
-connection.connect();
-console.log('Hello');
+
+connection.connect(function(err){
+  if(err){
+    console.log('Error connecting to Db');
+    return;
+  }
+  console.log('Connection established');
+});
+
+
 connection.query('SELECT bannerid from banner', function(err, rows) {
   if (!err)
     console.log('The solution is: ', rows);
