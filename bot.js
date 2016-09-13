@@ -39,11 +39,6 @@ function mission(banner) {
   console.log(missionid);
   console.log(bannerid);
   
-  MysqlDataSource dataSource = new MysqlDataSource();
-dataSource.setUser("b643743dcc0429");
-dataSource.setPassword("a5f59d79");
-dataSource.setServerName("us-cdbr-iron-east-04.cleardb.net");
-
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'us-cdbr-iron-east-04.cleardb.net',
