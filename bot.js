@@ -48,11 +48,10 @@ var connection = mysql.createConnection({
 });
 
 connection.connect();
-
-connection.query('SELECT bannerid from banner', function(err, rows, fields) {
+console.log('Hello')
+connection.query('SELECT bannerid from banner', function(err, rows) {
   if (!err)
     console.log('The solution is: ', rows);
-    console.log('Hello!');
   else
     console.log('Error while performing Query.');
 });
