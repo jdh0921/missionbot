@@ -48,7 +48,7 @@ var connection = mysql.createConnection({
 });
 
 connection.connect();
-console.log('Hello')
+console.log('Hello');
 connection.query('SELECT bannerid from banner', function(err, rows) {
   if (!err)
     console.log('The solution is: ', rows);
