@@ -40,6 +40,7 @@ function mission(banner) {
   console.log(bannerid);
   
 var mysql      = require('mysql');
+  console.log(mysql);
 var connection = mysql.createConnection({
   host     : 'us-cdbr-iron-east-04.cleardb.net',
   user     : 'b643743dcc0429',
