@@ -52,6 +52,7 @@ connection.connect();
 connection.query('SELECT bannerid from banner', function(err, rows, fields) {
   if (!err)
     console.log('The solution is: ', rows);
+    console.log('Hello!');
   else
     console.log('Error while performing Query.');
 });
