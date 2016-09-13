@@ -39,6 +39,18 @@ function mission(banner) {
   console.log(missionid);
   console.log(bannerid);
   
+  MysqlDataSource dataSource = new MysqlDataSource();
+dataSource.setUser("b643743dcc0429");
+dataSource.setPassword("a5f59d79");
+dataSource.setServerName("us-cdbr-iron-east-04.cleardb.net");
+
+Connection conn = dataSource.getConnection();
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery("SELECT bannerid FROM banners");
+rs.close();
+stmt.close();
+conn.close();
+  
 }
 function handleQueryResponse(response){
   console.log(response);
